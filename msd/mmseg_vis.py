@@ -79,7 +79,7 @@ def inference(rec, model, save_dir):
 
     image_save_path = os.path.join(save_dir, 'images')
     os.makedirs(image_save_path, exist_ok=True)
-
+    os.makedirs(os.path.join(save_dir, 'mask_rgb'), exist_ok=True)
     save_path = os.path.join(image_save_path,img_id)
     if not os.path.exists(save_path):
         urllib.request.urlretrieve(url, save_path)
